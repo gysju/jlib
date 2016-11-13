@@ -11,7 +11,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="jlib.cpp" />
+    <ClCompile Include="jlib_image.cpp" />
+    <ClCompile Include="jlib_math.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="jlib.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{94381367-2B97-4372-B754-B9D3D8CF74EB}</ProjectGuid>
