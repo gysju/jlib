@@ -25,6 +25,9 @@
     <ClCompile Include="jlib_math.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="jlib_time.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="jlib.h">
