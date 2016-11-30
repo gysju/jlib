@@ -12,9 +12,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="jlib.cpp" />
-    <ClCompile Include="jlib_image.cpp" />
-    <ClCompile Include="jlib_math.cpp" />
-    <ClCompile Include="jlib_time.cpp" />
+    <ClCompile Include="jlib_image.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="jlib_math.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="jlib_time.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -49,8 +55,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\SDL2-2.0.5\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\SDL2-2.0.5\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\SDL2-2.0.5\include;E:\SDL2-2.0.5\include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\SDL2-2.0.5\lib\x86;C:\SDL2-2.0.5\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>E:\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2;$(IncludePath)</IncludePath>
