@@ -12,3 +12,13 @@ float JMathGetRandom(const float min, const float max)
 {
 	return 0.0f;
 }
+
+template < typename T> T JMathGetMin(const T & a,const T & b)
+{
+	return (a < b) ? a : b;
+}
+
+template < typename T> T JMathGetMax(const T & a, const T & b)
+{
+	return (a > b) ? a : b;
+}

@@ -12,6 +12,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="jlib.cpp" />
+    <ClCompile Include="jlib_dbg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="jlib_image.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -25,16 +28,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="jlib.h" />
+    <ClInclude Include="jlib_platform.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{94381367-2B97-4372-B754-B9D3D8CF74EB}</ProjectGuid>
     <RootNamespace>Project1</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">

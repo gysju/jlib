@@ -5,6 +5,7 @@
 
 #include "jlib_image.cpp"
 #include "jlib_math.cpp"
+#include "jlib_dbg.cpp"
 
 // Main function
 
