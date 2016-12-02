@@ -22,7 +22,7 @@ float JMathGetRandom(const float min, const float max);
 
 // ** DEBUG **
 
-int JDbg_Printf(const char * pText);
+void JDbg_Printf(const char * pText, ...);
 
 // ** INPUT **
 

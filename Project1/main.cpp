@@ -5,6 +5,7 @@ and may not be redistributed without written permission.*/
 #include <SDL.h>
 #include <stdio.h>
 #include <string>
+#include "jlib.h"
 
 //Screen dimension constants
 const int SCREEN_WIDTH = 640;
@@ -123,14 +124,16 @@ int main(int argc, char* args[])
 	//Start up SDL and create window
 	if (!init())
 	{
-		printf("Failed to initialize!\n");
+		JDbg_Printf("Failed to initialize!\n");
 	}
 	else
 	{
+		JDbg_Printf("test\n");
+
 		//Load media
 		if (!loadMedia())
 		{
-			printf("Failed to load media!\n");
+			JDbg_Printf("Failed to load media!\n");
 		}
 		else
 		{

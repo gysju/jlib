@@ -4,6 +4,6 @@
 #include <math.h>
 #include <stdio.h>
 #include <time.h>
-
+#include <Windows.h>
 
 #endif // JLIB_PLATFORM_H_INCLUDED

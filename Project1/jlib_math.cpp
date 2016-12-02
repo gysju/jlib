@@ -8,9 +8,25 @@ float JMathDegToRad(const float deg)
 {
 	return deg * (PI / 180.0f);
 }
+
+int JMathGetRandom(const int min, const int max)
+{
+	// add assert if max < min
+
+	float random = (float)rand() / (float)RAND_MAX;
+	int diff = max - min;
+
+	return min + (int)(random * diff);
+}
+
 float JMathGetRandom(const float min, const float max)
 {
-	return 0.0f;
+	// add assert if max < min
+
+	float random = (float)rand() / (float)RAND_MAX;
+	float diff = max - min;
+
+	return min + random * diff;
 }
 
 template < typename T> T JMathGetMin(const T & a,const T & b)
