@@ -1,10 +1,3 @@
-/*This source code copyrighted by Lazy Foo' Productions (2004-2015)
-and may not be redistributed without written permission.*/
-
-//Using SDL, standard IO, and strings
-#include <SDL.h>
-#include <stdio.h>
-#include <string>
 #include "jlib.h"
 
 //Screen dimension constants
@@ -34,14 +27,11 @@ SDL_Surface* gStretchedSurface = NULL;
 
 bool init()
 {
-	//Initialization flag
-	bool success = true;
-
 	//Initialize SDL
 	if (SDL_Init(SDL_INIT_VIDEO) < 0)
 	{
 		printf("SDL could not initialize! SDL Error: %s\n", SDL_GetError());
-		success = false;
+		return false;
 	}
 	else
 	{
@@ -50,7 +40,7 @@ bool init()
 		if (gWindow == NULL)
 		{
 			printf("Window could not be created! SDL Error: %s\n", SDL_GetError());
-			success = false;
+			return false;
 		}
 		else
 		{
@@ -59,23 +49,20 @@ bool init()
 		}
 	}
 
-	return success;
+	return true;
 }
 
 bool loadMedia()
 {
-	//Loading success flag
-	bool success = true;
-
 	//Load stretching surface
 	gStretchedSurface = loadSurface("05_optimized_surface_loading_and_soft_stretching/stretch.bmp");
 	if (gStretchedSurface == NULL)
 	{
 		printf("Failed to load stretching image!\n");
-		success = false;
+		return false;
 	}
 
-	return success;
+	return true;
 }
 
 void close()

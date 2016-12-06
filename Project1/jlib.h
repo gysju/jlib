@@ -11,6 +11,9 @@ struct JImage;
 
 int GImageGetSizeX(const JImage * image);
 int GImageGetSizeY(const JImage * image);
+int GImageGetPosX(const JImage * image);
+int GImageGetPosY(const JImage * image);
+
 JImage * GImageCreate(const int sizeX, const int sizeY);
 JImage * GImageLoad(const char * fileName);
 
